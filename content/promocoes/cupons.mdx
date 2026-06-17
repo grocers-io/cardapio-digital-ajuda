@@ -1,0 +1,49 @@
+---
+title: Cupons de Desconto
+description: Como criar e gerenciar cupons de desconto no cardápio digital Menuh.
+---
+
+import { Callout, Steps } from 'nextra/components'
+
+# Cupons de Desconto
+
+Cupons permitem oferecer descontos no checkout da sua vitrine. O cliente digita o código do cupom antes de finalizar o pedido.
+
+## Criar um cupom
+
+<Steps>
+### Acesse Promoções no painel
+
+Em **Painel → Promoções**.
+
+### Clique em "Novo cupom"
+
+O formulário de criação abre.
+
+### Configure o cupom
+
+| Campo | Descrição |
+|---|---|
+| **Código** | O código que o cliente digita (ex.: `BEMVINDO10`) |
+| **Tipo de desconto** | Porcentagem (ex.: 10%) ou valor fixo (ex.: R$ 5,00) |
+| **Valor do desconto** | Percentual ou valor a descontar |
+| **Valor mínimo do pedido** | Pedido mínimo para o cupom ser válido (opcional) |
+| **Limite de usos** | Quantas vezes o cupom pode ser usado (deixe vazio para ilimitado) |
+| **Data de validade** | Data e hora de expiração (opcional) |
+| **Ativo** | Toggle para ativar/desativar o cupom sem excluí-lo |
+
+### Salve e divulgue
+
+Após salvar, o cupom já está disponível na vitrine.
+</Steps>
+
+<Callout type="info">
+  O cupom é aplicado sobre o **subtotal do pedido** (sem a taxa de frete).
+</Callout>
+
+## Boas práticas
+
+- **Boas-vindas:** `BEMVINDO10` com 10% de desconto, sem limite de validade
+- **Sazonal:** código temático (ex.: `NATAL25`) com data de expiração
+- **Fidelidade:** gere um código único por campanha para medir a conversão
+- **Valor mínimo:** defina um pedido mínimo para garantir viabilidade da operação

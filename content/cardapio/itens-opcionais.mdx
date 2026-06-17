@@ -1,0 +1,83 @@
+---
+title: Itens e Opcionais
+description: Como cadastrar itens e configurar grupos de opcionais no cardápio Menuh.
+---
+
+import { Callout, Steps, Tabs } from 'nextra/components'
+
+# Itens e Opcionais
+
+Cada item do cardápio pode ter **grupos de opcionais** — variações, tamanhos, bordas, extras, sabores. O cliente monta o pedido na vitrine e o total atualiza em tempo real.
+
+## Criar um item
+
+<Steps>
+### Abra a categoria
+
+Em **Cardápio → Cardápio Principal**, clique na categoria onde quer adicionar o item.
+
+### Clique em "Novo item"
+
+O formulário de cadastro abre no painel lateral.
+
+### Preencha os dados básicos
+
+| Campo | Descrição |
+|---|---|
+| **Nome** | Nome do produto (obrigatório) |
+| **Descrição** | Ingredientes ou detalhes (opcional) |
+| **Preço** | Preço base do item |
+| **Foto** | Imagem do produto. Recomendado 800×800px |
+
+### Salve o item
+
+Após salvar, o item aparece na categoria.
+</Steps>
+
+## Grupos de opcionais
+
+Um grupo define um conjunto de escolhas para o cliente:
+
+- **Tamanho** — Broto, Média, Grande (escolha 1)
+- **Borda** — Sem borda, Cheddar, Catupiry (escolha 1)
+- **Extras** — Bacon, Ovo, Queijo extra (escolha 0 a 3)
+
+### Adicionar um grupo de opcionais
+
+<Steps>
+### Abra o item
+
+Clique no item na lista. A edição abre no painel lateral.
+
+### Clique em "Adicionar grupo de opcionais"
+
+O formulário de grupo aparece abaixo dos dados do item.
+
+### Configure o grupo
+
+| Campo | Descrição |
+|---|---|
+| **Nome do grupo** | Ex.: "Tamanho", "Borda", "Extras" |
+| **Mínimo** | Quantos o cliente deve obrigatoriamente escolher (0 = opcional) |
+| **Máximo** | Quantos o cliente pode escolher no máximo |
+
+### Adicione os opcionais
+
+Dentro do grupo, clique em **Adicionar opcional** para cada opção:
+
+- **Nome** do opcional (ex.: "Grande")
+- **Preço adicional** — valor a somar ao preço base
+
+### Salve o grupo
+
+Clique em **Salvar grupo**.
+</Steps>
+
+<Callout type="info">
+  **Mínimo = 1 e Máximo = 1**: o cliente escolhe exatamente uma opção (ex.: tamanho).
+  **Mínimo = 0 e Máximo = 3**: o cliente pode adicionar até 3 extras, ou nenhum.
+</Callout>
+
+## Ocultar ou pausar um item
+
+Use o **toggle de visibilidade** ao lado do item para ocultá-lo sem excluir. Útil quando um produto acabou ou é sazonal.

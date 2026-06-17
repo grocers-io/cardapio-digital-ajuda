@@ -1,0 +1,39 @@
+---
+title: Quadro de Pedidos
+description: Como usar o quadro kanban para gerenciar o fluxo de preparo dos pedidos.
+---
+
+import { Callout } from 'nextra/components'
+
+# Quadro de Pedidos
+
+O quadro de pedidos é uma visualização kanban que organiza os pedidos por etapa de preparo.
+
+## Etapas do quadro
+
+| Coluna | Significado |
+|---|---|
+| **Pendente** | Pedido recebido, aguardando aceite |
+| **Em preparo** | Pedido aceito, em produção na cozinha |
+| **Saiu para entrega** | Pedido finalizado, aguardando entrega |
+| **Concluído** | Entrega confirmada ou retirada realizada |
+
+## Mover um pedido entre colunas
+
+Você pode mover um pedido de duas formas:
+
+1. **Arrastar e soltar** o card de pedido para a coluna desejada
+2. **Abrir o pedido** e clicar no botão de avanço de status
+
+## Informações visíveis no card
+
+- Número do pedido
+- Nome do cliente
+- Resumo dos itens
+- Valor total
+- Tempo desde o pedido (ex.: "há 8 min")
+- Tipo: delivery ou retirada
+
+<Callout type="info">
+  O quadro atualiza em tempo real. Se você tiver dois dispositivos abertos, os dois verão o mesmo estado dos pedidos sem precisar atualizar.
+</Callout>

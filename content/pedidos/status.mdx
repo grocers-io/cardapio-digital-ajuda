@@ -1,0 +1,40 @@
+---
+title: Status e Rastreio
+description: Como funcionam os status dos pedidos e o rastreio para o cliente.
+---
+
+import { Callout } from 'nextra/components'
+
+# Status e Rastreio
+
+Cada pedido passa por uma sequência de status. O cliente pode acompanhar o andamento em tempo real pela vitrine.
+
+## Ciclo de status
+
+| Status | Quem define | O que significa |
+|---|---|---|
+| **Pendente** | Sistema | Pedido recebido, aguardando aceite |
+| **Em preparo** | Você | Pedido aceito, cozinha produzindo |
+| **Saiu para entrega** | Você | Produto saiu com o entregador (delivery) |
+| **Pronto para retirada** | Você | Produto está pronto no balcão (takeaway) |
+| **Concluído** | Você | Entrega confirmada ou retirada realizada |
+| **Cancelado** | Você | Pedido recusado ou cancelado |
+
+## Notificações para o cliente
+
+O cliente pode receber e-mail nos seguintes eventos (se informou e-mail no checkout):
+
+| Evento | E-mail enviado? |
+|---|---|
+| Pedido confirmado | ✅ Sim |
+| Saiu para entrega | ✅ Sim |
+| Pedido concluído | ✅ Sim |
+| Pedido cancelado | ❌ Não (notifique manualmente) |
+
+<Callout type="info">
+  O e-mail é enviado automaticamente se o cliente informou o endereço de e-mail no checkout.
+</Callout>
+
+## Rastreio na vitrine
+
+Após finalizar o pedido, o cliente recebe um link de acompanhamento. A página atualiza em tempo real — quando você muda o status no painel, o cliente vê a mudança sem precisar recarregar.

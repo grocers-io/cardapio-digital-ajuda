@@ -1,0 +1,34 @@
+---
+title: Cardápio
+description: Como estruturar categorias, itens e opcionais no seu cardápio digital.
+---
+
+import { Cards } from 'nextra/components'
+
+# Cardápio
+
+O cardápio é organizado em **categorias** e **itens**. Cada item pode ter grupos de **opcionais** (adicionais, variações, tamanhos). Tudo configurado pelo painel.
+
+## Estrutura
+
+```
+Cardápio
+├── Categoria (ex.: Pizzas)
+│   ├── Item (ex.: Calabresa)
+│   │   ├── Grupo de opcionais (ex.: Tamanho)
+│   │   │   ├── Broto — R$ 29,90
+│   │   │   └── Grande — R$ 49,90
+│   │   └── Grupo de opcionais (ex.: Borda)
+│   │       ├── Sem borda
+│   │       └── Cheddar — R$ 5,00
+│   └── Item (ex.: Frango com Catupiry)
+└── Categoria (ex.: Bebidas)
+```
+
+## Nesta seção
+
+<Cards>
+  <Cards.Card title="Categorias" href="/cardapio/categorias" />
+  <Cards.Card title="Itens e Opcionais" href="/cardapio/itens-opcionais" />
+  <Cards.Card title="Pizza Meio a Meio" href="/cardapio/pizza-meio-a-meio" />
+</Cards>

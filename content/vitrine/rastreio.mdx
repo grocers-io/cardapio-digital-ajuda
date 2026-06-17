@@ -1,0 +1,45 @@
+---
+title: Acompanhar o Pedido
+description: Como o cliente acompanha o status do pedido em tempo real na vitrine Menuh.
+---
+
+# Acompanhar o Pedido
+
+Após finalizar o pedido, o cliente pode acompanhar o andamento em tempo real, sem precisar ligar ou mandar mensagem.
+
+## Como acessar o rastreio
+
+Logo após finalizar o pedido, o cliente é redirecionado automaticamente para a **página de acompanhamento**. O link tem o formato:
+
+```
+vitrine.menuh.io/sua-loja/pedidos/ID-DO-PEDIDO
+```
+
+## O que o cliente vê
+
+- **Status atual** com progresso visual (ex.: "Em preparo")
+- **Itens pedidos** com quantidades e opcionais
+- **Endereço de entrega** ou confirmação de retirada
+- **Forma de pagamento** escolhida
+- **Valor total** (subtotal + frete)
+
+A página **atualiza automaticamente** — o cliente não precisa recarregar para ver mudanças de status.
+
+## Notificações por e-mail
+
+Se o cliente informou e-mail no checkout, ele recebe notificações nos seguintes momentos:
+
+| Evento | E-mail enviado? |
+|---|---|
+| Pedido confirmado (aceito pelo estabelecimento) | Sim |
+| Pedido saiu para entrega | Sim |
+| Pedido concluído | Sim |
+| Pedido cancelado | Não (notifique manualmente) |
+
+## O cliente perdeu o link de rastreio
+
+Se o cliente perdeu o link, você pode:
+
+1. Abrir o pedido no painel
+2. Copiar o número do pedido
+3. Informar o cliente para acessar `vitrine.menuh.io/sua-loja/pedidos/NUMERO`

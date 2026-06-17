@@ -1,0 +1,28 @@
+{
+  "index": "Perguntas Frequentes",
+  "sep-painel": {
+    "type": "separator",
+    "title": "Painel Admin"
+  },
+  "primeiros-passos": "Primeiros Passos",
+  "cardapio": "Cardápio",
+  "pedidos": "Pedidos",
+  "loja": "Loja",
+  "promocoes": "Promoções",
+  "clientes": "Clientes",
+  "sep-vitrine": {
+    "type": "separator",
+    "title": "Vitrine do Cliente"
+  },
+  "vitrine": "Vitrine",
+  "sep-conta": {
+    "type": "separator",
+    "title": "Planos e Conta"
+  },
+  "planos": "Planos",
+  "sep-integracoes": {
+    "type": "separator",
+    "title": "Integrações"
+  },
+  "integracoes": "Integrações"
+}

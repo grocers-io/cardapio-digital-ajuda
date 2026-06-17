@@ -1,0 +1,54 @@
+---
+title: Pizza Meio a Meio
+description: Como configurar pizzas meio a meio no cardápio digital Menuh.
+---
+
+import { Callout, Steps } from 'nextra/components'
+
+# Pizza Meio a Meio
+
+O Menuh suporta pizzas meio a meio: o cliente escolhe dois sabores diferentes para a mesma pizza.
+
+## Como funciona para o cliente
+
+Na vitrine, ao abrir uma pizza com meio a meio habilitado, o cliente vê a opção de **dividir em dois sabores**. Ele escolhe o primeiro sabor e depois o segundo. O total é calculado automaticamente.
+
+## Configurar meio a meio
+
+<Steps>
+### Acesse o item de pizza
+
+Em **Cardápio → Cardápio Principal**, abra o item que representa a pizza (ex.: "Pizza Grande").
+
+### Habilite o meio a meio
+
+Na edição do item, ative a opção **"Permitir meio a meio"**.
+
+### Configure os sabores disponíveis
+
+Adicione um grupo de opcionais chamado **"1º sabor"** e outro **"2º sabor"**. Cada sabor é um opcional dentro do grupo:
+- Nome: "Calabresa"
+- Preço adicional: R$ 0,00 (ou o valor do acréscimo, se houver)
+
+### Defina a regra de preço
+
+Você pode configurar:
+
+- **Preço do mais caro** — cobra o preço do sabor mais caro da combinação (mais comum)
+- **Média dos dois** — cobra a média entre os dois sabores
+- **Preço do mais barato** — cobra o menor preço
+
+### Salve
+
+Clique em **Salvar**. O meio a meio já fica disponível na vitrine.
+</Steps>
+
+<Callout type="info">
+  A política de preço de meio a meio é definida por item. Você pode ter regras diferentes para pizza broto e pizza grande.
+</Callout>
+
+## Dicas
+
+- Mantenha os grupos de sabores com nomes claros: "1º Sabor" e "2º Sabor".
+- Se algum sabor tiver acréscimo (ex.: borda de catupiry), adicione-o como grupo separado.
+- Teste o fluxo na vitrine antes de divulgar — simule o pedido de uma pizza meio a meio.

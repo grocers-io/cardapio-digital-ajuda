@@ -1,0 +1,58 @@
+---
+title: Entrega e Frete
+description: Como configurar as opções de entrega, retirada e cálculo de frete no Menuh.
+---
+
+import { Callout, Tabs } from 'nextra/components'
+
+# Entrega e Frete
+
+Em **Painel → Loja → Entrega** você configura como seu estabelecimento entrega e como o frete é calculado.
+
+## Tipos de entrega
+
+Você pode habilitar um ou os dois tipos:
+
+- **Delivery** — o estabelecimento entrega no endereço do cliente
+- **Retirada no local (takeaway)** — o cliente retira no balcão
+
+## Modalidades de cálculo de frete
+
+<Tabs items={['Taxa fixa', 'Por distância', 'Por bairro/região']}>
+  <Tabs.Tab>
+    **Taxa fixa**
+
+    Cobra um valor único de frete para qualquer endereço dentro da área de entrega. Simples de configurar e ideal para entregas em raio pequeno.
+  </Tabs.Tab>
+  <Tabs.Tab>
+    **Por distância**
+
+    O frete é calculado com base na distância entre o estabelecimento e o endereço do cliente.
+
+    Configure:
+    - **Preço por km** — valor cobrado por quilômetro rodado
+    - **Distância máxima** — raio máximo de entrega em km
+    - **Taxa mínima** — valor mínimo cobrado para distâncias curtas
+  </Tabs.Tab>
+  <Tabs.Tab>
+    **Por bairro/região**
+
+    Define um valor de frete diferente para cada bairro ou região. Mais trabalhoso de configurar, mas mais justo para áreas com distâncias variáveis.
+  </Tabs.Tab>
+</Tabs>
+
+## Frete grátis
+
+Em qualquer modalidade, configure **frete grátis** para pedidos acima de um valor mínimo. Em **Painel → Loja → Entrega → Frete grátis a partir de**.
+
+## Retirada no local
+
+Quando habilitada, o cliente vê "Retirar no local" no checkout — sem cobrança de frete. O endereço do estabelecimento é exibido para orientar o cliente.
+
+<Callout type="info">
+  Você pode habilitar retirada e delivery ao mesmo tempo. O cliente escolhe no checkout.
+</Callout>
+
+## Tempo estimado
+
+Configure o tempo estimado de entrega para delivery e retirada. Esses tempos aparecem na vitrine e no e-mail de confirmação.

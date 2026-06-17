@@ -1,0 +1,62 @@
+---
+title: Open Delivery e Webhooks
+description: Como o Menuh se integra com sistemas externos via Open Delivery e webhooks.
+---
+
+import { Callout } from 'nextra/components'
+
+# Open Delivery e Webhooks
+
+O Menuh adota o padrão **Open Delivery** para estrutura de dados e oferece webhooks para integração com sistemas externos.
+
+## O que é Open Delivery
+
+Open Delivery é um padrão aberto de APIs para o setor de alimentação, desenvolvido pela Abrasel. Ele define como cardápios, pedidos e estabelecimentos são representados, facilitando integrações entre plataformas.
+
+O Menuh implementa o padrão Open Delivery para:
+
+- Estrutura de **cardápio** (categorias, itens, preços, opcionais)
+- Ciclo de vida de **pedidos** (status, itens pedidos, pagamento)
+- Dados do **estabelecimento** (endereço, horários, formas de entrega)
+
+## Webhooks
+
+Webhooks permitem que o Menuh notifique um sistema externo toda vez que um evento importante acontece.
+
+### Eventos disponíveis
+
+| Evento | Quando é disparado |
+|---|---|
+| `order.created` | Novo pedido recebido na vitrine |
+| `order.confirmed` | Pedido aceito pelo estabelecimento |
+| `order.dispatched` | Pedido marcado como saiu para entrega |
+| `order.ready_for_pickup` | Pedido pronto para retirada |
+| `order.concluded` | Pedido concluído |
+| `order.cancelled` | Pedido cancelado |
+
+### Como configurar um webhook
+
+<Callout type="warning">
+  A configuração de webhooks está disponível via API. Entre em contato com o suporte para obter as credenciais e a documentação técnica.
+</Callout>
+
+1. Tenha um endpoint HTTPS público pronto para receber as notificações (POST JSON)
+2. Entre em contato com o suporte informando a URL do seu endpoint
+3. Cada notificação inclui um header `X-Webhook-Secret` para verificação de autenticidade
+
+### Exemplo de payload
+
+```json
+{
+  "event": "order.created",
+  "orderId": "ord_abc123",
+  "merchantId": "merchant_xyz",
+  "createdAt": "2026-06-17T20:00:00Z",
+  "order": {
+    "id": "ord_abc123",
+    "status": "PENDING",
+    "totalPrice": 4990,
+    "items": [{ "name": "Pizza Calabresa Grande", "quantity": 1, "unitPrice": 4990 }]
+  }
+}
+```
