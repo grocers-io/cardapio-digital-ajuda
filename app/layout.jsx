@@ -15,30 +15,90 @@ export const metadata = {
   ),
 }
 
+/* CSS variables para troca de logo light/dark sem JS extra */
+const brandStyle = `
+  :root {
+    --nextra-primary-hue: 0deg;
+    --nextra-primary-saturation: 100%;
+    --nextra-primary-lightness: 63%;
+    --logo-light: block;
+    --logo-dark: none;
+  }
+  .dark {
+    --nextra-primary-hue: 0deg;
+    --nextra-primary-saturation: 100%;
+    --nextra-primary-lightness: 63%;
+    --logo-light: none;
+    --logo-dark: block;
+  }
+`
+
+const MenuhLogo = () => (
+  <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+    {/* logo para tema claro */}
+    <img
+      src="/logo-light.svg"
+      alt="Menuh"
+      height="30"
+      style={{ display: 'var(--logo-light)', verticalAlign: 'middle' }}
+    />
+    {/* logo para tema escuro */}
+    <img
+      src="/logo-dark.svg"
+      alt="Menuh"
+      height="30"
+      style={{ display: 'var(--logo-dark)', verticalAlign: 'middle' }}
+    />
+    <span
+      style={{
+        fontSize: '0.75rem',
+        fontWeight: 600,
+        color: 'var(--nextra-colors-gray-600, #6b7280)',
+        paddingLeft: '0.5rem',
+        borderLeft: '1px solid currentColor',
+        opacity: 0.6,
+      }}
+    >
+      Ajuda
+    </span>
+  </span>
+)
+
 const navbar = (
   <Navbar
-    logo={
-      <span style={{ fontWeight: 700, fontSize: '1.1rem', letterSpacing: '-0.02em' }}>
-        Menuh · Ajuda
-      </span>
-    }
+    logo={<MenuhLogo />}
     projectLink="https://www.menuh.io"
     projectIcon={
-      <span style={{ fontSize: '0.75rem', fontWeight: 600 }}>← Site</span>
+      <span style={{ fontSize: '0.72rem', fontWeight: 600, opacity: 0.7 }}>
+        ← menuh.io
+      </span>
     }
   />
 )
 
 const footer = (
   <Footer>
-    <span>© {new Date().getFullYear()} Menuh (Grocers.io). Todos os direitos reservados.</span>
+    <span style={{ fontSize: '0.85rem', opacity: 0.7 }}>
+      © {new Date().getFullYear()}{' '}
+      <a
+        href="https://www.menuh.io"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: '#FF4444', textDecoration: 'none' }}
+      >
+        Menuh
+      </a>{' '}
+      · Grocers.io · Todos os direitos reservados.
+    </span>
   </Footer>
 )
 
 export default async function RootLayout({ children }) {
   return (
     <html lang="pt-BR" dir="ltr" suppressHydrationWarning>
-      <Head />
+      <Head>
+        <style dangerouslySetInnerHTML={{ __html: brandStyle }} />
+      </Head>
       <body>
         <Layout
           navbar={navbar}
