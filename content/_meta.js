@@ -1,0 +1,28 @@
+export default {
+  index: 'Perguntas Frequentes',
+  'sep-comecando': {
+    type: 'separator',
+    title: 'Começando'
+  },
+  'primeiros-passos': 'Primeiros Passos',
+  loja: 'Loja',
+  cardapio: 'Cardápio',
+  'sep-operacao': {
+    type: 'separator',
+    title: 'Operação'
+  },
+  pedidos: 'Pedidos',
+  vitrine: 'Vitrine',
+  clientes: 'Clientes',
+  promocoes: 'Promoções',
+  'sep-conta': {
+    type: 'separator',
+    title: 'Planos e Conta'
+  },
+  planos: 'Planos',
+  'sep-integracoes': {
+    type: 'separator',
+    title: 'Integrações'
+  },
+  integracoes: 'Integrações'
+}
