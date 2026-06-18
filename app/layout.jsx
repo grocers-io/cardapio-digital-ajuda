@@ -13,6 +13,10 @@ export const metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ajuda.menuh.io'
   ),
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+  },
 }
 
 /* CSS variables para troca de logo light/dark sem JS extra */
