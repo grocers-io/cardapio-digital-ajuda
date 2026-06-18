@@ -1,5 +1,5 @@
 import { Footer, Layout, Navbar } from 'nextra-theme-docs'
-import { Head } from 'nextra/components'
+import { Head, Search } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import 'nextra-theme-docs/style.css'
 
@@ -104,11 +104,14 @@ export default async function RootLayout({ children }) {
           navbar={navbar}
           pageMap={await getPageMap()}
           footer={footer}
+          search={<Search placeholder="Buscar na documentação..." />}
           docsRepositoryBase="https://github.com/grocers-io/cardapio-digital-ajuda/tree/main/content"
           editLink="Editar esta página"
           feedback={{ content: 'Dúvidas ou sugestões?' }}
-          toc={{ title: 'Nesta página' }}
+          toc={{ title: 'Nesta página', backToTop: 'Voltar ao topo' }}
+          themeSwitch={{ dark: 'Escuro', light: 'Claro', system: 'Sistema' }}
           sidebar={{ defaultMenuCollapseLevel: 1 }}
+          copyPageButton={false}
         >
           {children}
         </Layout>
